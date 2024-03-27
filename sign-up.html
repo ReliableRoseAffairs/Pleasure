@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="cc.css">
+    </head>
+<h2>
+  Kind Matilda<br>Sign up</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="t.me/kind_matilda" class="social"><i class="fab fa-telegram-t"></i></a>
+				<a href="mailto:matildathroat@gmail.com" class="social"><i class="fab fa-google-plus-g"></i></a>
+				
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" id="full_name" placeholder="Name" />
+			<input type="email" id="email" placeholder="Email" />
+			<input type="password" id="password" placeholder="Password" />
+			<button onclick="register()">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="t.me/kind_matilda" class="social"><i class="fab fa-telegram-f"></i></a>
+				<a href="mailto:matildathroat@gmail.com class="social"><i class="fab fa-google-plus-g"></i></a>
+				
+			</div>
+			
+			<span>Click on Sign up to Sign up your account</span>
+			
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please Sign up</p>
+				<button class="ghost" id="signIn">Sign up</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your details and start journey with me</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+		Kind Matild <i class="fa fa-heart"></i> 
+		<a target="_blank" href="https://boonpleasure.com">Boonpleasure</a>
+		
+		
+	</p>
+</footer>
+
+</body>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="cc.js"></script>
+<script src="app.js"></script>
+</html>
