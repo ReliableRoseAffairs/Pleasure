@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Matilda</title>
+    <link rel="stylesheet" href="login.css"> <!-- You can link your CSS file here -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+                
+            
+            <h1 class="header-title">Matilda</h1>
+            
+        </div>
+    </header>
+  
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            
+              <form id="signin-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <p class="signup-link">Don't have an account? <a href="create-account.html">Sign Up</a></p>
+        </div>
+    </main>
+    </form>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3>Matilda</h3>
+            
+        </div>
+        <div class="footer-links">
+            <a href="#">Terms of service</a>
+            <span class="slash">/</span>
+            <a href="#">Privacy Center</a>
+            <span class="slash">/</span>
+            <a href="#">Do not sell or share my personal information</a>
+            <span class="slash">/</span>
+            <a href="security.html">Security Center</a>
+            
+        
+            <span class="slash">/</span>
+            <a href="#">Service Member benefits</a>
+        </div>
+        <p style="color:#111">All users of our online services are subject to our Privacy Statement and agree to be bound by the Terms of Service. Please review.<br><br>© 2024 BoonGrowth All rights reserved</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script>
+        
+            // Include your Firebase config here
+        var firebaseConfig = {
+  apiKey: "AIzaSyAtVvPjdsj84mWqaG4-7SyjbljCnslZ1SM",
+  authDomain: "hendaa-1.firebaseapp.com",
+  databaseURL: "https://hendaa-1-default-rtdb.firebaseio.com",
+  projectId: "hendaa-1",
+  storageBucket: "hendaa-1.appspot.com",
+  messagingSenderId: "831134776479",
+  appId: "1:831134776479:web:56cd7098fc69cd70a376aa"
+};
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        const signInForm = document.getElementById('signin-form');
+        signInForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = signInForm.email.value;
+            const password = signInForm.password.value;
+        
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Redirect to dashboard after successful sign-in
+                    window.location.replace('inde.html');
+                })
+                .catch((error) => {
+                    console.error(error.message);
+                });
+        });
+    </script>
+</body>
+</html>
+
+    

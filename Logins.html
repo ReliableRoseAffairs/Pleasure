@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Boon Growth</title>
+    <link rel="stylesheet" href="Stylish.css"> <!-- You can link your CSS file here -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <h1 class="header-title">Boon Growth</h1>
+            <a href="#" class="login-btn">Login</a>
+        </div>
+    </header>
+  
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="#" method="POST" class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <p class="signup-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3>BoonGrowth</h3>
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/link.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="#">Terms of service</a>
+            <span class="slash">/</span>
+            <a href="#">Privacy Center</a>
+            <span class="slash">/</span>
+            <a href="#">Do not sell or share my personal information</a>
+            <span class="slash">/</span>
+            <a href="#">AdChoices</a>
+            <span class="slash">/</span>
+            <a href="#">Security Center</a>
+            <span class="slash">/</span>
+            <a href="#">Card Agreement</a>
+            <span class="slash">/</span>
+            <a href="#">Service Member benefits</a>
+        </div>
+        <p style="color:#111">All users of our online services are subject to our Privacy Statement and agree to be bound by the Terms of Service. Please review.<br><br>© 2024 American Express. All rights reserved</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get form and submit button
+            const loginForm = document.querySelector(".login-form");
+            const submitButton = document.querySelector(".submit-btn");
+
+            // Function to handle form submission
+            function handleSubmit(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get username and password values
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                // Perform validation (you can add more complex validation as needed)
+                if (username.trim() === "" || password.trim() === "") {
+                    alert("Please enter both username and password.");
+                    return;
+                }
+
+                // You can perform AJAX request to submit form data to server for validation
+                // For simplicity, we'll just log the username and password to console
+                console.log("Username:", username);
+                console.log("Password:", password);
+
+                // Clear form fields after submission
+                loginForm.reset();
+            }
+
+            // Add event listener to form submit button
+            submitButton.addEventListener("click", handleSubmit);
+        });
+    </script> <!-- You can link your JavaScript file here -->
+</body>
+</html>
